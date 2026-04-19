@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+    /* Background Abu-abu Gelap dengan Animasi Gradient */
+    background: linear-gradient(-45deg, #1a1a1a, #2d2d2d, #1f1f1f, #333333);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Animasi Gradient Bergerak */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Foto Profil Bulat - Outline Emas */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #FFD700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animasi melayang untuk foto profil */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 0 50px rgba(255, 215, 0, 0.5), 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.6), 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ukuran lebih kecil untuk foto di card musik */
+.music-profile {
+    width: 120px;
+    height: 120px;
+}
+
+/* Grup Tombol */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Tombol dengan Outline Emas */
+.btn {
+    padding: 14px 24px;
+    background: transparent;
+    border: 2px solid #FFD700;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFD700;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    background: rgba(20, 20, 20, 0.7);
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 215, 0, 0.1);
+    border-color: #FFC700;
+    color: #FFC700;
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Card Musik - Outline Emas */
+.music-card {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 30px 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.2), 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Judul Lagu - Warna Emas */
+.song-title {
+    color: #FFD700;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+/* Music Player */
+.music-player {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Tombol Play/Pause - Outline Emas */
+.play-pause-btn {
+    background: rgba(20, 20, 20, 0.7);
+    border: 2px solid #FFD700;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.play-pause-btn:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    border-color: #FFC700;
+}
+
+/* Icon SVG - Warna Emas */
+.play-pause-btn svg {
+    fill: #FFD700;
+    transition: fill 0.3s ease;
+}
+
+.play-pause-btn:hover svg {
+    fill: #FFC700;
+}
+
+.progress-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Waktu - Warna Emas */
+.time {
+    color: #FFD700;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 40px;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+}
+
+.progress-bar-wrapper {
+    flex: 1;
+}
+
+/* Progress Bar Background - Abu-abu Gelap dengan Outline Emas */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(60, 60, 60, 0.8);
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Progress Fill - Warna Emas */
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #FFD700, #FFC700, #FFD700);
+    border-radius: 10px;
+    transition: width 0.1s ease;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Hover effect pada progress bar */
+.progress-bar:hover {
+    border-color: #FFD700;
+}
+
+.progress-bar:hover .progress-fill {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Scrollbar Custom (Opsional) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #FFD700, #B8860B);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #FFC700, #DAA520);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+    
+    .profile-picture {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .music-profile {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .music-card {
+        padding: 20px 15px;
+    }
+}
+
+/* Efek Glow untuk semua outline emas saat hover */
+.btn:focus, .play-pause-btn:focus {
+    outline: none;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+/* Animasi pulse untuk elemen emas */
+@keyframes goldPulse {
+    0% {
+        border-color: #FFD700;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    }
+    50% {
+        border-color: #FFC700;
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+    }
+    100% {
+        border-color: #FFD700;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    }
+}
+
+/* Tambahkan animasi pulse ke card musik */
+.music-card {
+    animation: goldPulse 4s ease-in-out infinite;
+}
