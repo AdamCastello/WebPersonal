@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DimzKanjut99</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Foto Profil 1 (Bulat) -->
+            <div class="profile-picture" id="profilePic1">
+                <img id="profileImg1" src="https://via.placeholder.com/150" alt="Foto Profil 1">
+            </div>
+
+            <!-- Tombol-tombol -->
+            <div class="button-group">
+                <button class="btn" id="btnWhatsapp">Whatsapp DimzKanjut99</button>
+                <button class="btn" id="btnTiktok">Akun Tiktok</button>
+                <button class="btn" id="btnInstagram">Akun Instagram</button>
+                <button class="btn" id="btnGrub">Grub Whatsapp</button>
+                <button class="btn" id="btnW18">Website 18+</button>
+                <button class="btn" id="btnHG">Website HGame</button>
+            </div>
+
+            <!-- Card Musik -->
+            <div class="music-card">
+                <!-- Foto Profil 2 (Bulat) -->
+                <div class="profile-picture music-profile" id="profilePic2">
+                    <img id="profileImg2" src="https://via.placeholder.com/120" alt="Foto Profil 2">
+                </div>
+
+                <!-- Judul Lagu -->
+                <div class="song-title" id="songTitle">Judul Lagu</div>
+
+                <!-- Player Musik -->
+                <div class="music-player">
+                    <!-- Tombol Play/Pause -->
+                    <button class="play-pause-btn" id="playPauseBtn">
+                        <svg class="play-icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <svg class="pause-icon" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Durasi dan Progress -->
+                    <div class="progress-container">
+                        <span class="time current-time" id="currentTime">0:00</span>
+                        <div class="progress-bar-wrapper">
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                        </div>
+                        <span class="time duration" id="duration">0:00</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Audio Element (Hidden) -->
+    <audio id="audioPlayer" preload="metadata">
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <!-- JavaScript Files -->
+    <script src="script/gambar1.js"></script>
+    <script src="script/gambar2.js"></script>
+    <script src="script/lagu.js"></script>
+    <script src="script/whatsapp.js"></script>
+    <script src="script/tiktok.js"></script>
+    <script src="script/instagram.js"></script>
+    <script src="script/grub.js"></script>
+    <script src="script/backgroundAnimation.js"></script>
+    <script src="script/W18.js"></script>
+    <script src="script/WebHG.js"></script>
+</body>
+</html>
